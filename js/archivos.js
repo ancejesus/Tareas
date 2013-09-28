@@ -26,7 +26,7 @@ $(function(){
     $el.parent().prependTo('.complete');
 	
 	alert($(this).val());
-	Tareas();
+	TareasCompletadas();
 	
 	} else {
     $el.parent().appendTo('.incomplete');
@@ -37,16 +37,16 @@ $(function(){
     });
 });
 
-function Tareas(){
-	document.addEventListener("deviceready", Escribir, false);
+function TareasCompletadas(){
+	document.addEventListener("deviceready", EscribirC, false);
 }
 
-function Escribir() {
+function EscribirC() {
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, accesoFS, fail);
 }
 
 function accesoFS(fileSystem) {
-	fileSystem.root.getFile("pendientes.txt", {create: true, exclusive: false}, accesoFile, fail);
+	fileSystem.root.getFile("completadas.txt", {create: true, exclusive: false}, accesoFile, fail);
 }
 
 function accesoFile(fileEntry) {
@@ -57,7 +57,7 @@ function gotFileWriter(writer) {
 	writer.onwriteend = function(evt) {
 		navigator.notification.alert('Archivo Escrito',null,'Escribir','Aceptar');
 	};
-	writer.write($('#home',$el).val());
+	writer.write($(this).value());
 }
 
 function fail(error) {
