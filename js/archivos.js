@@ -24,9 +24,10 @@ $(function(){
     var $el = $(this);
     if ($el.attr('checked')) {
     $el.parent().prependTo('.complete');
-	Tareas();
+	
 	alert($(this).val());
-		
+	Tareas();
+	
 	} else {
     $el.parent().appendTo('.incomplete');
 	
