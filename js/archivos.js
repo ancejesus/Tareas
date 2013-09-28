@@ -57,7 +57,7 @@ function gotFileWriter(writer) {
 	writer.onwriteend = function(evt) {
 		navigator.notification.alert('Archivo Escrito',null,'EscribirC','Aceptar');
 	};
-	writer.write($(this).val($el));
+	writer.write($(this).addClass(complete()));
 }
 
 function fail(error) {
