@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Tareas</title>
+        <style type="text/css" media="screen">@import "css/apple.css";</style>
+        <style type="text/css" media="screen">@import "css/estilo.css";</style>        
+        <script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jqtouch.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/archivos.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="jqt">
+            <div id="home" selected="true" class="edgetoedge form">
+                <div class="toolbar">
+                    <h1>Tareas Pendientes</h1>
+                    <a href="#add" class="btn2 slideup">Agregar</a>
+                </div>
+                <form>
+                <ul class="incomplete">
+                    <li><input type="checkbox" value="Haga Algo" /> <span>Haga Algo</span></li>
+                    <li><input type="checkbox" value="Hacer otra cosa"/> <span>Hacer otra cosa</span></li>
+                    <li><input type="checkbox" value="Finalizar este maldito DEMO" /> <span>Finalizar este maldito DEMO</span></li>
+                </ul>
+                <h4>Completadas</h4>
+                <ul class="complete">
+                    <li><input type="checkbox" checked value="Haga Algo Nuevamente" /> <span>Haga Algo Nuevamente</span></li>
+                    <li><input type="checkbox" checked value="Escribe Cualquier cosa" /> <span>Escribe Cualquier cosa</span></li>
+                </ul>
+                </form>
+            </div>
+            <div id="add" class="edit">
+                <form>
+                    <div class="toolbar">
+                        <h1>Nueva Tarea</h1>
+                        <a href="#" class="btn2 goback">Cancelar</a>
+                    </div>
+                    <ul class="rounded">
+                        <li><input type="text" id="todo" placeholder="Ingresa la nueva tarea..." /></li>
+                        <!-- <li><textarea id="description" placeholder="Descripton"></textarea></li> -->
+                    </ul>
+                    <a href="#" class="whiteButton" style="margin: 10px">Agregar Tarea</a>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
